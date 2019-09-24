@@ -8,6 +8,8 @@
 #ifndef SUPERHERO_H_
 #define SUPERHERO_H_
 #include <string>
+#include <sstream>
+
 using namespace std;
 
 class SuperHero {

@@ -30,5 +30,8 @@ int main() {
 	SuperHero * unHero = &alexisLeTrotteur;
 	cout << "Exporter a travers un pointeur " << unHero->exporter() << endl; // appel est polymorphique mais cela ne marche pas
 
+	SuperHero * leHero = new HeroRapide();
+	leHero->exporter();
+
 	return 0;
 }

@@ -63,5 +63,12 @@ bool SuperHero::aDeLaMatiereNoire()
 
 string SuperHero::exporter()
 {
-	return "<SuperHero></SuperHero>";
+	stringstream xml;
+	xml << "<SuperHero>";
+	xml << "<nom>" << this->nom << "</nom>";
+	xml << "<force>" << this->force << "</force>";
+	xml << "<invisibilite>" << this->invisibilite << "</invisibilite>";
+	xml << "<matiereNoire>" << this->matiereNoire << "</matiereNoire>";
+	xml << "</SuperHero>";
+	return xml.str();
 }
