@@ -61,14 +61,21 @@ bool SuperHero::aDeLaMatiereNoire()
 	return this->matiereNoire;
 }
 
-string SuperHero::exporter()
+string SuperHero::exporterChamps()
 {
 	stringstream xml;
-	xml << "<SuperHero>";
 	xml << "<nom>" << this->nom << "</nom>";
 	xml << "<force>" << this->force << "</force>";
 	xml << "<invisibilite>" << this->invisibilite << "</invisibilite>";
 	xml << "<matiereNoire>" << this->matiereNoire << "</matiereNoire>";
+	return xml.str();
+}
+
+string SuperHero::exporter()
+{
+	stringstream xml;
+	xml << "<SuperHero>";
+	xml << this->exporterChamps();
 	xml << "</SuperHero>";
 	return xml.str();
 }

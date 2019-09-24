@@ -19,10 +19,7 @@ string HeroRapide::exporter()
 	stringstream xml;
 	xml << "<HeroRapide>";
 	xml << "<vitesse>" << this->vitesse << "</vitesse>";
-	xml << "<nom>" << this->nom << "</nom>";
-	xml << "<force>" << this->force << "</force>";
-	xml << "<invisibilite>" << this->invisibilite << "</invisibilite>";
-	xml << "<matiereNoire>" << this->matiereNoire << "</matiereNoire>";
+	xml << SuperHero::exporterChamps();
 	xml << "</HeroRapide>";
 	return xml.str();
 }

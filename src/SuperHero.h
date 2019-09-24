@@ -18,6 +18,8 @@ protected:
 	int force;
 	bool invisibilite;
 	bool matiereNoire;
+protected:
+	string exporterChamps();
 public:
 	SuperHero();
 	virtual ~SuperHero();
