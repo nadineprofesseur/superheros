@@ -10,6 +10,15 @@
 HeroArcher::HeroArcher() {
 }
 
+const Arc* HeroArcher::getArc() const {
+	return arc;
+}
+
+void HeroArcher::setArc(Arc *arc) {
+	this->arc = arc;
+}
+
 HeroArcher::~HeroArcher() {
+	if(this->arc != NULL) delete this->arc;
 }
 

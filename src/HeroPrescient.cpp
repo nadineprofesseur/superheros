@@ -8,7 +8,7 @@
 #include "HeroPrescient.h"
 
 HeroPrescient::HeroPrescient() {
-
+this->points = 0;
 }
 
 HeroPrescient::~HeroPrescient() {

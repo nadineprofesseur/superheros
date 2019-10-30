@@ -9,6 +9,10 @@
 #define SUPERHERO_H_
 #include <string>
 #include <sstream>
+#include <vector>
+#include "Pouvoir.h"
+
+#define TAILLE_MATRICE 10
 
 using namespace std;
 
@@ -18,6 +22,8 @@ protected:
 	int force;
 	bool invisibilite;
 	bool matiereNoire;
+	int points;
+	vector<Pouvoir *> pouvoirs;
 protected:
 	string exporterChamps();
 public:
@@ -33,6 +39,9 @@ public:
 	void activerMatiereNoire();
 	void desactiverMatiereNoire();
 	bool aDeLaMatiereNoire();
+	void ajouterPouvoir(Pouvoir*);
+	void detruirePouvoirs();
+
 
 	virtual string exporter();
 

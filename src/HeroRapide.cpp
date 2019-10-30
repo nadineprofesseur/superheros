@@ -9,6 +9,7 @@
 
 HeroRapide::HeroRapide() {
 	this->vitesse = HERO_RAPIDE_VITESSE_DEPART;
+	this->points = 300;
 }
 
 HeroRapide::~HeroRapide() {
@@ -19,7 +20,7 @@ string HeroRapide::exporter()
 	stringstream xml;
 	xml << "<HeroRapide>";
 	xml << "<vitesse>" << this->vitesse << "</vitesse>";
-	xml << SuperHero::exporterChamps();
+	//xml << SuperHero::exporterChamps();
 	xml << "</HeroRapide>";
 	return xml.str();
 }

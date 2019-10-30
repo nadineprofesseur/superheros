@@ -7,15 +7,14 @@
 
 #include "SuperHero.h"
 
+//float SuperHero::moyenneHauteurSaut = 0.0f;
+
 SuperHero::SuperHero() { // constructeur
-
-
 
 }
 
 SuperHero::~SuperHero() { // destructeur
-
-
+	this->detruirePouvoirs();
 }
 
 void SuperHero::setNom(string nom)
@@ -69,6 +68,24 @@ string SuperHero::exporterChamps()
 	xml << "<invisibilite>" << this->invisibilite << "</invisibilite>";
 	xml << "<matiereNoire>" << this->matiereNoire << "</matiereNoire>";
 	return xml.str();
+}
+
+void SuperHero::ajouterPouvoir(Pouvoir * pouvoir)
+{
+	this->pouvoirs.push_back(pouvoir);
+}
+
+void SuperHero::detruirePouvoirs()
+{
+	Pouvoir * pouvoir;
+
+	for(vector<Pouvoir *>::iterator visiteur = pouvoirs.begin(); visiteur != pouvoirs.end(); visiteur++)
+	{
+		pouvoir = *visiteur;
+		delete pouvoir;
+	}
+
+	this->pouvoirs.clear();
 }
 
 string SuperHero::exporter()
